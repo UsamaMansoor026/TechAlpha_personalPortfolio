@@ -1,0 +1,94 @@
+* {
+  scroll-behavior: smooth;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+.profile {
+  filter: drop-shadow(0 0 0.75rem #5127db);
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.name {
+  background: linear-gradient(to right, #5127db, #37286b);
+  background-clip: text;
+  --webkit-background-clip: text;
+  color: transparent;
+}
+
+.animateClass {
+  animation: leftToRight 1.5s;
+}
+
+.comeOut {
+  animation: comeOut 1.5s;
+}
+
+.slideIn {
+  animation: slideIn 1.5s;
+}
+
+@keyframes comeOut {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    scale: 1;
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile {
+    scale: 1.2;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  article {
+    height: 400px !important;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  article {
+    height: 500px !important;
+  }
+}
